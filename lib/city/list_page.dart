@@ -19,6 +19,22 @@ class CityListPage extends StatelessWidget {
               // TODO: 詳細画面に遷移する
             },
           )
+          ListTile(
+            title: const Text('横浜市'),
+            subtitle: const Text('政令指定都市'),
+            trailing: const Icon(Icons.navigate_next),
+            onTap: () {
+              // TODO: 詳細画面に遷移する
+            },
+          )
+          ListTile(
+            title: const Text('川崎市'),
+            subtitle: const Text('政令指定都市'),
+            trailing: const Icon(Icons.navigate_next),
+            onTap: () {
+              // TODO: 詳細画面に遷移する
+            },
+          )
         ],
       ),
     );
