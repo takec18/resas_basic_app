@@ -49,10 +49,6 @@ class _CityDetailPageState extends State<CityDetailPage> {
         body: FutureBuilder<String>(
           future: _municipalityTaxesFuture,
           builder: (context, snapshot) {
-            // print(snapshot.data);
-            // return Center(
-            //   child: Text('${widget.city}の詳細画面です'),
-            // );
             switch (snapshot.connectionState) {
               case ConnectionState.done:
                 final result = jsonDecode(snapshot.data!)['result']
@@ -66,7 +62,10 @@ class _CityDetailPageState extends State<CityDetailPage> {
                     final item = items[index];
                     return ListTile(
                       title: Text('${item['year']}年'.toString()),
-                      trailing: Text('${item['value']}円'),
+                      trailing: Text(
+                        '${(item['value'] as int) * 1000}円',
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
                     );
                   },
                 );
