@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
+import 'package:resas_basic_app/city/annual_municipality_tax.dart';
 
 import '../env.dart';
 
@@ -56,15 +57,17 @@ class _CityDetailPageState extends State<CityDetailPage> {
                     as Map<String, dynamic>;
                 final data = result['data'] as List;
                 final items = data.cast<Map<String, dynamic>>();
+                final taxes =
+                    items.map(AnnualMunicipalityTax.fromJson).toList();
                 return ListView.separated(
-                  itemCount: items.length,
+                  itemCount: taxes.length,
                   separatorBuilder: (context, index) => const Divider(),
                   itemBuilder: (context, index) {
-                    final item = items[index];
+                    final tax = taxes[index];
                     return ListTile(
-                      title: Text('${item['year']}年'.toString()),
+                      title: Text('${tax.year}年'),
                       trailing: Text(
-                        _formatTaxLabel(item['value'] as int),
+                        _formatTaxLabel(tax.value),
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     );
