@@ -1,6 +1,6 @@
 {
-    "name": "resas_basic_app",
-    "short_name": "resas_basic_app",
+    "name": "resas_challenge_app",
+    "short_name": "resas_challenge_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

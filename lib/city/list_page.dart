@@ -37,7 +37,14 @@ class _CityListPageState extends State<CityListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('市区町村一覧'),
+        title: const Text(
+          '市区町村一覧',
+          style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+              color: Colors.blue),
+        ),
       ),
       body: FutureBuilder<String>(
         future: _citiesFuture,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:resas_basic_app/city/list_page.dart';
+import 'package:resas_challenge_app/city/list_page.dart';
 
 void main() {
   runApp(const MainApp());

@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:resas_basic_app/city/annual_municipality_tax.dart';
-import 'package:resas_basic_app/city/city.dart';
+import 'package:resas_challenge_app/city/annual_municipality_tax.dart';
+import 'package:resas_challenge_app/city/city.dart';
 
 import '../env.dart';
 
